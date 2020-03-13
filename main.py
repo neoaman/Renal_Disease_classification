@@ -17,15 +17,15 @@ def test():
     if (request.method == "POST"):
         val = list(request.form.values())
         _input_ = [eval(i) for i in val]
-        print(_input_)
+        # print(_input_)
         output = mp.f_model(_input_)
         # rp.reporter(_input_)
-        df = pd.DataFrame()
-        df['Field'] = ['age', 'bp', 'sg', 'al', 'su', 'rbc_normal', 'pc_normal', 'pcc_present','ba_present', 'bgr', 'bu', 'sc', 'sod', 'pot', 'hemo', 'pcv', 'wc', 'rc', 'htn_yes', 'dm_yes', 'cad_yes', 'appet_poor', 'pe_yes', 'ane_yes']
-        df['Response'] = _input_
+        # df = pd.DataFrame()
+        # df['Field'] = ['age', 'bp', 'sg', 'al', 'su', 'rbc_normal', 'pc_normal', 'pcc_present','ba_present', 'bgr', 'bu', 'sc', 'sod', 'pot', 'hemo', 'pcv', 'wc', 'rc', 'htn_yes', 'dm_yes', 'cad_yes', 'appet_poor', 'pe_yes', 'ane_yes']
+        # df['Response'] = _input_
         # df.to_csv("static/data/report.csv",index = False)
-        df.to_excel(r'static/data/report.xlsx', index = False)
-        print("______DONE_____")
+        # df.to_excel(r'static/data/report.xlsx', index = False)
+        # print("______DONE_____")
         
         return render_template("index.html",out=output,msgg="")
     else:
