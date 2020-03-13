@@ -1,7 +1,6 @@
 from flask import Flask
 from flask import render_template,request,send_file
 import model as mp
-import reporting as rp
 import pandas as pd
 
 
