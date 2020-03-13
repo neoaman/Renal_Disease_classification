@@ -1,7 +1,7 @@
 from flask import Flask
 from flask import render_template,request,send_file
 import model as mp
-import pandas as pd
+# import pandas as pd
 
 
 app = Flask(__name__)
@@ -37,7 +37,7 @@ def test():
 
 @app.route("/report")
 def reportt():
-    return render_template('report.html')
+    return render_template('index.html')
 
 
 
